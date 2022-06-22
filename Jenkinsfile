@@ -10,14 +10,12 @@ pipeline {
         stage("init") {
             steps {
                 echo 'updated jenkins build from github change'
-                script {
-                   gv = load "script.groovy" 
-                }
             }
         }
         stage("build") {
             steps {
                 script {
+                    gv = load "script.groovy" 
                     gv.buildApp()
                 }
             }
