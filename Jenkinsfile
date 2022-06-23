@@ -54,13 +54,19 @@ pipeline {
         }
         post{
             always{
-                echo 'done with all stages'
+                steps{
+                    echo 'done with all stages'
+                }
             }
             success{
-                echo 'build succeeded'
+                steps{
+                    echo 'build succeeded'
+                }
             }
             failure{
-                echo 'build failed'
+               steps{
+                    echo 'build failed'
+                }
             }
         }
     }   
