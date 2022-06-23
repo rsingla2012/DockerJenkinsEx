@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage("init") {
             steps {
-                echo 'updated jenkins build from github change'
+                echo 'updated jenkins build from github change #2'
             }
         }
         stage("build") {
